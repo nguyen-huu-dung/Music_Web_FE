@@ -94,6 +94,7 @@ const ReactListenMusic = () => {
     useEffect(async () => {
         await asyncPlayMusic();
         refMusic.current.load();
+        setShowTab(true);
         if(forceMusic !== null) { 
             const musicInListenedMusic = listenedMusic.findIndex((music) => music._id === forceMusic._id);
             if(musicInListenedMusic === -1) {
